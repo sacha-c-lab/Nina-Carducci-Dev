@@ -148,7 +148,7 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i - 1;
+          index = i - 1; // Correction bug : était "i" → affichait toujours la même image
         }
       });
       next =
@@ -187,7 +187,7 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i + 1;
+          index = i + 1; // Correction bug : était "i" → affichait toujours la même image
         }
       });
       next = imagesCollection[index] || imagesCollection[0];
@@ -238,7 +238,7 @@
         return;
       }
       $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active active-tag");
+      $(this).addClass("active active-tag"); // Correction bug : "active" manquait → le filtre actif n'avait pas le fond doré
 
       var tag = $(this).data("images-toggle");
 

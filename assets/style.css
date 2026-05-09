@@ -6,11 +6,11 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
-.carousel-indicators [data-bs-target] {
-	background-color: #E5975F ;
+.carousel-indicators [data-bs-target] {  /* Contraste des points indicateurs du carousel : couleur personnalisée pour passer WCAG */
+	background-color: #E5975F;
 	opacity: 1;
 }
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev, .carousel-control-next { /* Contraste des flèches prev/next : fond sombre pour rendre les icônes lisibles sur les images */
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 40px;
 	height: 40px;
@@ -18,7 +18,7 @@ body {
 	transform: translateY(-50%);
 	border-radius: 50%;
 }
-header {
+header {   /* Renommé depuis .top-header pour correspondre à la balise sémantique <header> */
 	background-color: white;
 	position: sticky;
 	top:0;
@@ -29,7 +29,7 @@ header {
 	padding-block: 30px;
 	align-items: center;
 }
-header h1 {
+header h1 {       /* Renommé depuis .top-header .name — h1 remplace le h3 d'origine */
 	font-size: 26px;
 }
 .nav ul {
@@ -102,7 +102,7 @@ header h1 {
 .gallery .nav {
 	justify-content: center;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {   /* Contraste corrigé : color #fff → #000 (ratio 2:1 → 9.8:1) */
 	color: #000;
 	background-color: #BEB45A;
 	border-radius:0 ;
@@ -128,7 +128,6 @@ header h1 {
 	object-fit: cover;
 	padding: .5em;
 }
-
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;
@@ -254,7 +253,6 @@ input[type="submit"] {
 		width: 100%;
 	}
 }
-
 @media all and (max-width: 1000px) {
 	#about{
 		flex-direction: column;
@@ -311,7 +309,6 @@ input[type="submit"] {
 		z-index: -1;
 	}
 }
-
 @media all and (max-width: 650px) {
 	header {
 		flex-direction: column;
