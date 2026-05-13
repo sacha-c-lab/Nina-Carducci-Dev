@@ -187,6 +187,12 @@ header h1 {       /* Renommé depuis .top-header .name — h1 remplace le h3 d'o
 	justify-content: space-between;
 	z-index: 1;
 }
+.service__price p {
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-bottom: 8px;
+}
 #contact {
 	margin: auto;
 	background-color: #D8D3A8 ;
@@ -307,6 +313,13 @@ input[type="submit"] {
 		bottom: 0;
 		right: 0;
 		z-index: -1;
+	}
+}
+@media all and (max-width: 768px) {
+	.carousel-item img {
+		max-height: 200px;
+		object-fit: cover;
+		object-position: center;
 	}
 }
 @media all and (max-width: 650px) {
